@@ -1,0 +1,38 @@
+html{
+  box-sizing:border-box;
+  background-color:#135270;
+  color:white;
+}
+
+*, *:before, *:after{
+  box-sizing:inherit;
+  font-family: 'Poppins', sans-serif;
+}
+
+#header{
+  text-align:center;
+
+
+  #SWOTInfo{
+    margin:0 auto;
+    min-width:40%;
+    max-width:60%
+  }
+
+  #begin{
+    background-color:#DAA520;
+
+    height:40px;
+    width:80px;
+    font-size:110%;
+  }
+
+}
+
+#query{
+  margin:0 auto;
+  width:60%;
+  color:black;
+  visibility:0%;
+
+}
