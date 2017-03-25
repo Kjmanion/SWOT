@@ -31,12 +31,13 @@ html{
 
 
 #query{
+  display:none;
   transition:opacity 500ms ease-in 500ms;
   text-align:center;
   margin:0 auto;
   width:60%;
   color:black;
-  transform:translateY(-250px)
+  transform:translateY(-225px);
 }
 
 
@@ -49,10 +50,11 @@ html{
   max-width:90%;
   height:600px;
   transition:transform 500ms ease-in-out 100ms;
-  display:flex;
+  display:none;
   h3{
     text-align:center;
   }
+
 
   #drawingBoard{
     width:100%;
