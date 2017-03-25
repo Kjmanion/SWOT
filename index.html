@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="header">
+    <div id="header" >
       <h1>Create your own SWOT Analysis</h1>
       <div id="SWOTInfo">
         <h3>What is SWOT Analysis?</h3>
@@ -18,12 +18,43 @@
       </div>
       <button id="begin">Begin!</button>
     </div>
-    <div id="query">
+    <div id="query" class="disappear offScreenQuery">
       <h2>What would you like to SWOT about?</h2>
-      <input type="text">
+      <input id ="theQuestion" type="text" size=40>
+      <button id="start">Start</button>
+    </div>
+    <div id="board" class="disappear offScreenQuery">
+      <h3 id="question"></h3>
+      <div id="drawingBoard">
+        <div id="strength"class="item">
+          <h4 class="title">Strengths</h4>
+          <ul class="traitList">
+            
+          </ul>
+        </div>
+        <div id="weakness"class="item">
+          <h4 class="title">Weaknesses</h4>
+            <ul class="traitList">
+
+            </ul>
+        </div>
+        <div id="threats"class="item">
+          <h4 class="title">Threats</h4>
+            <ul class="traitList">
+
+            </ul>
+        </div>
+        <div id="opportunity"class="item">
+          <h4 class="title">Opportunities</h4>
+            <ul class="traitList">
+
+            </ul>
+        </div>
+      </div>
+
 
     </div>
 
-
+    <script src="script.js"></script>
   </body>
 </html>
