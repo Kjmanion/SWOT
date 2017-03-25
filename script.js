@@ -16,7 +16,7 @@ document.getElementById("start").addEventListener("click", function(){
   var text = document.getElementById("theQuestion").value;
   console.log(text);
   document.getElementById("question").textContent = text;
-  document.getElementById("board").style.display = "block";
+  document.getElementById("board").style.display = "flex";
   document.getElementById("query").className = "disappear";
   setTimeout(function(){
     document.getElementById("query").style.display = "none";

@@ -46,23 +46,16 @@ html{
 
 #board{
   margin:0 auto;
-  min-width:80%;
-  max-width:90%;
+  width:85%;
   height:600px;
   transition:transform 500ms ease-in-out 100ms;
   display:none;
-  h3{
+  flex-flow:row wrap;
+  justify-content:center;
+
+  h3 {
     text-align:center;
-  }
-
-
-  #drawingBoard{
     width:100%;
-    height:90%;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:center;
-
   }
 
 }
