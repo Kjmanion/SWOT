@@ -85,6 +85,9 @@ html {
   order: 4;
   padding-top: 5px; }
 
+.traitItem {
+  margin-top: 4px; }
+
 /*-------------------------Board Input Div----------------------*/
 #boardInput {
   display: none;

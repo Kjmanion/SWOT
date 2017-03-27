@@ -38,17 +38,7 @@ board.addEventListener("click", function(e){
   }
 })
 
-function submission(){
-  if (this.textContent == "Cancel"){
-    board.style.filter="";
-    document.getElementById("boardInput").style.display="none";
-    return;
-  }else{
-    board.style.filter="";
-    document.getElementById("boardInput").style.display="none";
-    console.log("not there yet")
-  }
-}
+
 
 function addingLiItem(part){
   board.style.filter="blur(5px)";
@@ -57,7 +47,28 @@ function addingLiItem(part){
   console.log(part)
   var trait = part.target.parentNode.parentNode.id;
   boardInput.children[0].textContent = "What would you like to add to the " + trait + " box?";
-  console.log(part.target.parentNode.nextElementSibling);
+  var place = part.target.parentNode.nextElementSibling;
+  var length = place.children.length;
+
+  function submission(){
+    if (this.textContent == "Cancel"){
+      board.style.filter="";
+      document.getElementById("boardInput").style.display="none";
+      return;
+    }else{
+      board.style.filter="";
+      var item = document.getElementById("inputText").value;
+      document.getElementById("boardInput").style.display="none";
+      var li = document.createElement("li");
+      li.setAttribute("class", "traitItem");
+      li.textContent = item;
+      place.appendChild(li);
+      document.getElementById("inputText").value = "";
+    }
+  }
+  document.getElementById("cancel").addEventListener("click", submission);
+  document.getElementById("add").addEventListener("click", submission);
+
+
+
 }
-document.getElementById("cancel").addEventListener("click", submission);
-document.getElementById("add").addEventListener("click", submission);
