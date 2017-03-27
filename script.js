@@ -28,3 +28,36 @@ document.getElementById("start").addEventListener("click", function(){
   }, 2800)
   return text;
 })
+
+var board = document.getElementById("board");
+
+board.addEventListener("click", function(e){
+  if (e.target.classList.contains("sign")){
+    console.log("Yes")
+    addingLiItem(e);
+  }
+})
+
+function submission(){
+  if (this.textContent == "Cancel"){
+    board.style.filter="";
+    document.getElementById("boardInput").style.display="none";
+    return;
+  }else{
+    board.style.filter="";
+    document.getElementById("boardInput").style.display="none";
+    console.log("not there yet")
+  }
+}
+
+function addingLiItem(part){
+  board.style.filter="blur(5px)";
+  var boardInput = document.getElementById("boardInput");
+  boardInput.style.display="block";
+  console.log(part)
+  var trait = part.target.parentNode.parentNode.id;
+  boardInput.children[0].textContent = "What would you like to add to the " + trait + " box?";
+  console.log(part.target.parentNode.nextElementSibling);
+}
+document.getElementById("cancel").addEventListener("click", submission);
+document.getElementById("add").addEventListener("click", submission);

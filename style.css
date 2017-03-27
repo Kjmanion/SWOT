@@ -29,18 +29,34 @@ html {
   color: black;
   transform: translateY(-225px); }
 
-/*-------------------------Game Board--------------------------*/
+/*-------------------------SWOT Board--------------------------*/
 #board {
   margin: 0 auto;
-  width: 85%;
+  width: 90%;
   height: 600px;
   transition: transform 500ms ease-in-out 100ms;
   display: none;
   flex-flow: row wrap;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 1; }
   #board h3 {
+    display: inline-block;
     text-align: center;
     width: 100%; }
+
+.title {
+  text-align: center; }
+
+.sign {
+  display: inline-block; }
+
+.plus {
+  color: #DAA520; }
+
+.sign:hover {
+  transform: scale(1.6);
+  color: #e0ad2d;
+  cursor: pointer; }
 
 .item {
   min-width: 300px;
@@ -49,24 +65,41 @@ html {
   border-top: 1px solid black;
   border-left: 1px solid green;
   border-right: 1px solid yellow;
-  border-bottom: 1px solid black;
-  margin-top: 10px; }
+  border-bottom: 1px solid black; }
 
-.title {
-  text-align: center;
-  flex-grow: 1; }
+.traitInput {
+  display: block;
+  margin: 0 auto; }
 
-#strength {
+#strengths {
   order: 1; }
 
-#weakness {
+#weaknesses {
   order: 2; }
 
-#opportunity {
-  order: 3; }
+#opportunities {
+  order: 3;
+  padding-top: 5px; }
 
 #threats {
-  order: 4; }
+  order: 4;
+  padding-top: 5px; }
+
+/*-------------------------Board Input Div----------------------*/
+#boardInput {
+  display: none;
+  margin: 0 auto;
+  width: 350px;
+  z-index: 5;
+  transform: translateY(-800px); }
+  #boardInput h4 {
+    text-align: center; }
+  #boardInput input {
+    display: inline-block;
+    margin: 0 auto; }
+  #boardInput button {
+    display: inline-block;
+    margin-left: 5px; }
 
 /*-------------------------Transition Classes------------------*/
 .appear {
