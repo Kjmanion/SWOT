@@ -40,6 +40,10 @@ html{
   transform:translateY(-225px);
 }
 
+h2{
+  color:white;
+}
+
 
 /*-------------------------SWOT Board--------------------------*/
 
@@ -84,8 +88,7 @@ html{
 
 }
 
-.item{
-
+.trait {
   min-width:300px;
   width:50%;
   height:50%;
@@ -125,7 +128,16 @@ html{
 }
 
 .traitItem{
-  margin-top:4px;
+  list-style-type:circle;
+  margin-top:2px;
+}
+
+.minus{
+  font-size:2rem;
+  line-height:30px;
+  color:red;
+  cursor:pointer;
+  font-stretch:expanded;
 }
 
 

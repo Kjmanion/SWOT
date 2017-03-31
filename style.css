@@ -29,6 +29,9 @@ html {
   color: black;
   transform: translateY(-225px); }
 
+h2 {
+  color: white; }
+
 /*-------------------------SWOT Board--------------------------*/
 #board {
   margin: 0 auto;
@@ -58,7 +61,7 @@ html {
   color: #e0ad2d;
   cursor: pointer; }
 
-.item {
+.trait {
   min-width: 300px;
   width: 50%;
   height: 50%;
@@ -86,7 +89,15 @@ html {
   padding-top: 5px; }
 
 .traitItem {
-  margin-top: 4px; }
+  list-style-type: circle;
+  margin-top: 2px; }
+
+.minus {
+  font-size: 2rem;
+  line-height: 30px;
+  color: red;
+  cursor: pointer;
+  font-stretch: expanded; }
 
 /*-------------------------Board Input Div----------------------*/
 #boardInput {

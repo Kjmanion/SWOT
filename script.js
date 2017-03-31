@@ -33,12 +33,10 @@
   var board = document.getElementById("board");
 
   board.addEventListener("click", function(e){
-    if (e.target.classList.contains("sign")){
-      console.log("Yes")
-      addingLiItem(e);
-
-
+    if (e.target.classList[0] == "sign"){
+      addingLiItem(e)
     }
+
   })
 
   var place;
@@ -53,7 +51,6 @@
   }
 
   function submission(){
-    console.log(this.target);
     if (this.textContent == "Cancel"){
       board.style.filter="";
       document.getElementById("boardInput").style.display="none";
@@ -63,8 +60,12 @@
       var item = document.getElementById("inputText").value;
       document.getElementById("boardInput").style.display="none";
       var li = document.createElement("li");
+      var minusSpan = document.createElement("span");
+      minusSpan.textContent = "  -";
+      minusSpan.setAttribute("class", "minus")
       li.setAttribute("class", "traitItem");
       li.textContent = item;
+      li.appendChild(minusSpan);
       place.appendChild(li);
       document.getElementById("inputText").value = "";
       return;
@@ -75,5 +76,17 @@
 
   document.getElementById("cancel").addEventListener("click", submission, false);
   document.getElementById("add").addEventListener("click", submission, false)
+
+  document.getElementById("board").addEventListener("click", function(e){
+    if (e.target.classList[0]== "minus"){
+      var node = e.target.parentNode;
+      node.parentNode.removeChild(node);
+      
+    }
+
+  })
+
+
+
 
 })();
