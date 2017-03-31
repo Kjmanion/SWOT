@@ -48,9 +48,11 @@ h2 {
     width: 100%; }
 
 .title {
-  text-align: center; }
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px; }
 
-.sign {
+.sign, .minus {
   display: inline-block; }
 
 .plus {
@@ -58,8 +60,9 @@ h2 {
 
 .sign:hover {
   transform: scale(1.6);
-  color: #e0ad2d;
   cursor: pointer; }
+  .sign:hover .plus:hover {
+    color: #e0ad2d; }
 
 .trait {
   min-width: 300px;
@@ -68,7 +71,8 @@ h2 {
   border-top: 1px solid black;
   border-left: 1px solid green;
   border-right: 1px solid yellow;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black;
+  overflow: auto; }
 
 .traitInput {
   display: block;
@@ -93,11 +97,11 @@ h2 {
   margin-top: 2px; }
 
 .minus {
-  font-size: 2rem;
-  line-height: 30px;
+  margin-left: 10px;
   color: red;
   cursor: pointer;
-  font-stretch: expanded; }
+  text-align: right;
+  font-size: 1.25rem; }
 
 /*-------------------------Board Input Div----------------------*/
 #boardInput {
@@ -105,7 +109,7 @@ h2 {
   margin: 0 auto;
   width: 350px;
   z-index: 5;
-  transform: translateY(-800px); }
+  transform: translateY(-575px); }
   #boardInput h4 {
     text-align: center; }
   #boardInput input {

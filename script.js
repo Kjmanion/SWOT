@@ -42,12 +42,20 @@
   var place;
 
   function addingLiItem(part){
+    console.log(part);
     board.style.filter="blur(5px)";
     var boardInput = document.getElementById("boardInput");
     boardInput.style.display="block";
     var trait = part.target.parentNode.parentNode.id;
     boardInput.children[0].textContent = "What would you like to add to the " + trait + " box?";
     place = part.target.parentNode.nextElementSibling;
+    console.log(part.target.parentNode.parentNode.id)
+    var winWidth = window.innerWidth;
+    
+
+    if ((part.target.parentNode.parentNode.id == "opportunities" || part.target.parentNode.parentNode.id == "threats") && (winWidth < 680)){
+      document.getElementById("boardInput").style.transform = "translateY(-300px)";
+    }
   }
 
   function submission(){
@@ -61,13 +69,14 @@
       document.getElementById("boardInput").style.display="none";
       var li = document.createElement("li");
       var minusSpan = document.createElement("span");
-      minusSpan.textContent = "  -";
-      minusSpan.setAttribute("class", "minus")
+      minusSpan.textContent = " -";
+      minusSpan.setAttribute("class", "minus sign")
       li.setAttribute("class", "traitItem");
       li.textContent = item;
       li.appendChild(minusSpan);
       place.appendChild(li);
       document.getElementById("inputText").value = "";
+      document.getElementById("boardInput").style.transform = "translateY(-575px)";
       return;
     }
 

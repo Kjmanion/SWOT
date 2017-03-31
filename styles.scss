@@ -1,14 +1,18 @@
+
+
+
 html{
   box-sizing:border-box;
   background-color:#135270;
   color:white;
-
 }
 
 *, *:before, *:after{
   box-sizing:inherit;
   font-family:sans-serif;
 }
+
+
 
 #header{
   text-align:center;
@@ -68,10 +72,11 @@ h2{
 
 .title {
   text-align:center;
-
+  margin-top:12px;
+  margin-bottom:12px;
 }
 
-.sign{
+.sign, .minus{
   display:inline-block;
 
 }
@@ -83,9 +88,11 @@ h2{
 
 .sign:hover{
   transform:scale(1.6);
-  color:#e0ad2d;
+  
   cursor:pointer;
-
+  .plus:hover{
+    color:#e0ad2d;
+  }
 }
 
 .trait {
@@ -96,6 +103,7 @@ h2{
   border-left:1px solid green;
   border-right:1px solid yellow;
   border-bottom:1px solid black;
+  overflow:auto;
 }
 
 // .item:hover{
@@ -133,11 +141,11 @@ h2{
 }
 
 .minus{
-  font-size:2rem;
-  line-height:30px;
+  margin-left:10px;
   color:red;
   cursor:pointer;
-  font-stretch:expanded;
+  text-align:right;
+  font-size:1.25rem;
 }
 
 
@@ -150,7 +158,7 @@ h2{
   margin:0 auto;
   width:350px;
   z-index:5;
-  transform:translateY(-800px);
+  transform:translateY(-575px);
 
   h4{
     text-align:center;
